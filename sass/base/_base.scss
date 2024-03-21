@@ -1,0 +1,13 @@
+:root {
+  --size: 390;
+}
+
+html{
+  font-size: clamp(1px, 12px, 10*100vw/var(--size));
+}
+
+body{
+  font-size: 1.8rem;
+  min-height: 100vh;
+  width: 100%;
+}
