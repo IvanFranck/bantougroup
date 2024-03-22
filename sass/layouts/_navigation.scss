@@ -17,6 +17,29 @@ header{
 
 @include media('>=tablet'){
   header{
-    background-color: aqua;
+
+    .header__wrapper{
+
+      nav{
+        @include flex-center;
+        flex: 1 0 auto;
+
+        ul{
+          @include flex-center;
+          flex: 1 0 auto;
+
+          li:not(:last-child){
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
   }
+
+  ul{
+    li{
+      @include link;
+    }
+  }
+
 }

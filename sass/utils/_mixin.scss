@@ -21,12 +21,12 @@
 
   &::after{
     content: "";
-    height: 2px;
+    height: .1rem;
     display: block;
     position: absolute;
     width: 100%;
     right: 0px;
-    bottom: -.1rem;
+    bottom: -.5rem;
     background-color: $color-black;
     border-radius: $radius;
     transform-origin: right;

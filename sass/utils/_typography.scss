@@ -13,3 +13,13 @@
   font-weight: 700;
   line-height: 6.2rem;
 }
+
+
+.text-copy-1{
+  @extend %text-1;
+
+  @include media('>=tablet'){
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
