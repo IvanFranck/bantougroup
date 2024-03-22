@@ -36,17 +36,17 @@
 
             <aside role="navigation" class="menu-wrapper">
               <ol class="menu-list">
-                <li class="menu-list-item">
+                <li class="menu-list-item text-link">
                   <a class="menu-list-item-link" href="#">
                     Nos services
                   </a>
                 </li>
-                <li class="menu-list-item">
+                <li class="menu-list-item text-link">
                   <a class="menu-list-item-link" href="#">
                     À propos
                   </a>
                 </li>
-                <li class="menu-list-item">
+                <li class="menu-list-item text-link">
                   <a class="menu-list-item-link" href="#">
                     Contact
                   </a>
@@ -59,8 +59,10 @@
 
       <main role="main">
         <div class="hero">
-          <div class="hero-page_indicator">
-            <span>Home</span>
+          <div id="rigth" aria-orientation="right" class="hero-page_indicator">
+            <div class="hero-page_indicator-wrapper">
+              <p class="text-copy-1">Home</p>
+            </div>
           </div>
 
           <div class="hero-images">
@@ -78,10 +80,10 @@
           </div>
 
           <div class="hero-text">
-            <h1 class="hero-text-title">
+            <h1 class="hero-text-title text-title-1">
               Bantou Group
             </h1>
-            <div class="hero-text-description">
+            <div class="hero-text-description text-title-1">
               <p>
                 <strong>H</strong>armonie des <strong>B</strong>esoins,
                 <strong>C</strong>onvergence des <strong>S</strong>olutions
@@ -92,14 +94,27 @@
         </div>
 
         <div class="footer">
-          <p class="footer-text">Copyright © 2024 OpenInTech. Tout droits réservés</p>
-          <div class="footer-illustration"></div>
+          <p class="footer-text text-copy-2">Copyright © 2024 OpenInTech. Tous droits réservés.</p>
+
           <div class="footer-icons">
-            whatsapp
-            facebook
+            <div class="footer-icons-whatsapp">
+              <a href="#">
+                <img src="./assets/whatsapp.svg" alt="logo whatsapp">
+              </a>
+            </div>
+            <div class="footer-icons-facebook">
+              <a href="#">
+                <img src="./assets/facebook.svg" alt="logo facebook">
+              </a>
+            </div>
           </div>
         </div>
       </main>
+
+      <div class="pulse">
+        <div class="pulse-circle">
+        </div>
+      </div>
     </div>
   </div>
   <script type="module" src="/main.js"></script>

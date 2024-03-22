@@ -13,7 +13,6 @@
 
   &-text{
     @include flex-col-center;
-    @extend %title-1;
     width: 100%;
 
     &-title{
@@ -32,3 +31,93 @@
     }
   }
 }
+
+
+@include media('>=tablet'){
+
+  .hero{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    &-page_indicator{
+      grid-column: span 1/span 1;
+      display: block;
+
+
+      &-wrapper{
+        display: flex;
+        justify-content: start;
+
+        p{
+          writing-mode: vertical-rl;
+          position: relative;
+          font-weight: 600;
+          cursor: default;
+
+          &::after {
+            content: "";
+            position: absolute;
+            // bottom: 2rem;
+            top: 120%;
+            right: 50%;
+            transform: translateX(-50%);
+            left: auto;
+            display: block;
+            width: 1px;
+            height: 6rem;
+            margin: 0px auto;
+            background-color: $color-black;
+          }
+        }
+      }
+    }
+
+    &-images{
+      grid-column: span 5/span 5;
+      @include flex-col-center;
+
+      &-wrapper{
+        position: relative;
+        width: 25rem;
+        height: 33rem;
+      }
+
+      &-1, &-2, &-3{
+        position: absolute;
+        overflow: hidden;
+
+        img{
+          width: 25rem;
+          height: 33rem;
+          border-radius: $radius-2;
+        }
+      }
+
+      &-1{
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+      }
+
+      &-2{
+        bottom: -16rem;
+        right: -13rem;
+        z-index: 30;
+      }
+
+      &-3{
+        top: -16rem;
+        left: -13rem;
+        z-index: 10;
+      }
+    }
+
+    &-text{
+      grid-column: span 6/span 6;
+    }
+
+  }
+
+}
+

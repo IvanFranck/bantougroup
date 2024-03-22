@@ -7,6 +7,12 @@
     &__image{
       width: 9.6rem;
       height: 6rem;
+
+
+      @include media('>=tablet'){
+        width: 18rem;
+        height: 10rem;
+      }
     }
   }
 }

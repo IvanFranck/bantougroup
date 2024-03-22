@@ -9,15 +9,26 @@ main{
     width: 100%;
 
     &-text{
-      @extend %text-1;
-    }
-
-    &-illustration{
-      display: none;
+      font-weight: 200;
     }
 
     &-icons{
       display: none;
+    }
+
+    @include media('>=tablet'){
+      justify-content: space-between;
+
+
+      &-icons{
+        display: flex;
+        gap: 1rem;
+
+        img{
+          height: 3rem;
+          width: 3rem;
+        }
+      }
     }
   }
 }

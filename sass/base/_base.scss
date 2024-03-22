@@ -1,5 +1,9 @@
 :root {
   --size: 390;
+
+  @include media('>=tablet'){
+    --size: 1500
+  }
 }
 
 html{
@@ -25,4 +29,5 @@ body{
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
