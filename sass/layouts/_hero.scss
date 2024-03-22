@@ -1,0 +1,34 @@
+.hero{
+  @include flex-col-center;
+  width: 100%;
+  flex: 1 0 auto;
+
+  &-page_indicator{
+    display: none;
+  }
+
+  &-images{
+    display: none;
+  }
+
+  &-text{
+    @include flex-col-center;
+    @extend %title-1;
+    width: 100%;
+
+    &-title{
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    &-description{
+      font-weight: 400;
+      text-align: center;
+
+      strong{
+        font-weight: 700;
+      }
+    }
+  }
+}
