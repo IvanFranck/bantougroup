@@ -10,9 +10,34 @@
     left: 0px;
     min-height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
     visibility: visible;
     transition: $transition-default;
     transform: translateX(100vw);
+  }
+
+  &-list {
+    @include flex-col-center;
+    flex: 1 0 auto;
+  }
+
+  &-social-networks{
+    flex: 0 0 auto;
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 4rem;
+
+    img{
+      height: 3rem;
+      width: 3rem;
+    }
+
+    @include media('>=tablet'){
+      display: none;
+    }
   }
 }
 

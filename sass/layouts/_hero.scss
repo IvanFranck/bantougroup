@@ -80,6 +80,11 @@
         position: relative;
         width: 25rem;
         height: 33rem;
+
+        @include media('>=desktop'){
+          width: 22rem;
+          height: 30rem;
+        }
       }
 
       &-1, &-2, &-3{
@@ -90,6 +95,10 @@
           width: 25rem;
           height: 33rem;
           border-radius: $radius-2;
+          @include media('>=desktop'){
+            width: 22rem;
+            height: 30rem;
+          }
         }
       }
 
@@ -101,16 +110,37 @@
       }
 
       &-2{
-        bottom: -16rem;
-        right: -13rem;
         z-index: 30;
       }
 
       &-3{
-        top: -16rem;
-        left: -13rem;
         z-index: 10;
+
       }
+
+      @include media('<desktop'){
+        &-3{
+          top: -16rem;
+          left: -13rem;
+        }
+        &-2{
+          bottom: -16rem;
+          right: -13rem;
+        }
+      }
+
+
+      @include media('>=desktop'){
+        &-3{
+          top: -10rem;
+          left: -10rem;
+        }
+        &-2{
+          bottom: -10rem;
+          right: -10rem;
+        }
+      }
+
     }
 
     &-text{
@@ -120,4 +150,6 @@
   }
 
 }
+
+
 
