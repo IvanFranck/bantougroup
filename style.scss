@@ -1,10 +1,21 @@
-// vars
-@import './sass/variables';
+@import './sass/utils/variables';
+
+//utils
+@import './sass/utils/responsive';
+@import './sass/utils/mixin';
+@import './sass/utils/typography';
 
 //base
 @import './sass/base/reset';
 @import './sass/base/font';
 @import './sass/base/base';
 
-// typography
-@import './sass/typography';
+
+//layouts
+@import './sass/layouts/navigation';
+@import './sass/layouts/menu';
+
+
+//components
+@import './sass/components/logo';
+@import './sass/components/hamburger';

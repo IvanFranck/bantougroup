@@ -29,15 +29,14 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+a{
+	text-decoration: inherit;
+	color: inherit;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+*, :after, :before{
+	border: 0 solid;
+	box-sizing: border-box;
+	border-color: currentColor;
 }

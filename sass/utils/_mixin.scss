@@ -1,0 +1,46 @@
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin link{
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: $transition-default;
+  cursor: pointer;
+
+  &::after{
+    content: "";
+    height: 2px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    bottom: -.1rem;
+    background-color: $color-black;
+    border-radius: $radius;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: $transition-default;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+
+    &::after{
+      transform: scaleX(1);
+    }
+      outline: 0;
+  }
+}

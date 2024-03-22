@@ -1,0 +1,12 @@
+.logo{
+  width: auto;
+  height: auto;
+  &__container{
+    display: inline-block;
+    cursor: pointer;
+    &__image{
+      width: 9.6rem;
+      height: 6rem;
+    }
+  }
+}

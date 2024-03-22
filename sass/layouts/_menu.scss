@@ -1,0 +1,49 @@
+.menu{
+  // display: none;
+  &-wrapper{
+    @include flex-col-center;
+    background-color: $color-bg;
+    position: fixed;
+    z-index: 9;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    min-height: 100vh;
+    width: min(78vw, 40rem);
+    visibility: visible;
+    transition: $transition-default;
+    transform: translateX(100vw);
+  }
+}
+
+.menu__active{
+
+  .menu-wrapper{
+    transform: translateX(0vw);
+
+
+    .menu-list {
+      &-item {
+        @extend %text-link;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 3.2rem;
+
+
+        &-link {
+          display: inline-block;
+          position: relative;
+          width: 100%;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+ol{
+  li{
+    @include link;
+  }
+}
